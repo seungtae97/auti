@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Button } from '../../../components/Button/Button';
-// import { Card } from '../../../components/Card/Card'; // Not used in wizard mode
+// import { Card } from '../../../components/Card/Card'; // 위자드 모드에서 미사용
 import { WizardHeader } from '../../../components/WizardHeader/WizardHeader';
 import './SurveyPage.css';
 
@@ -13,12 +13,16 @@ const SurveyPage: React.FC = () => {
 
     const questions = [
         { id: 1, text: "아이는 스스로 잘 앉아있을 수 있습니까?" },
-        { id: 2, text: "시력에 문제가 없습니까?(안경 착용 가능)" },
-        { id: 3, text: "청력에 문제가 없습니까?(보청기 착용 가능)" }
+        {
+            id: 2, text: `시력에 문제가 없습니까?
+            (안경 착용 가능)` },
+        {
+            id: 3, text: `청력에 문제가 없습니까?
+            (보청기 착용 가능)` }
     ];
 
     const handleAnswer = (questionId: number, value: string) => {
-        // Update answer
+        // 응답 업데이트
         setAnswers(prev => ({ ...prev, [questionId]: value }));
 
         if (value === 'no') {
@@ -26,11 +30,11 @@ const SurveyPage: React.FC = () => {
             return;
         }
 
-        // Auto advance
+        // 자동 진행
         if (currentStep < questions.length - 1) {
-            setTimeout(() => setCurrentStep(prev => prev + 1), 300); // Small delay for visual feedback
+            setTimeout(() => setCurrentStep(prev => prev + 1), 300); // 시각적 피드백을 위한 지연
         } else {
-            // Last question answered yes -> navigate
+            // 마지막 질문 '네' 응답 -> 이동
             setTimeout(() => navigate('/test/risk-factor'), 300);
         }
     };
@@ -39,7 +43,7 @@ const SurveyPage: React.FC = () => {
         if (currentStep > 0) {
             setCurrentStep(prev => prev - 1);
         } else {
-            navigate(-1); // Go back to Home
+            navigate(-1); // 홈으로 이동
         }
     };
 
@@ -47,13 +51,13 @@ const SurveyPage: React.FC = () => {
 
     return (
         <div className="survey-container">
-            {/* Top Navigation */}
+            {/* 상단 네비게이션 */}
             <WizardHeader
                 title="기본 설문"
                 currentStage={1}
                 onBack={handleBack}
             />
-            {/* Dot Indicator for current section */}
+            {/* 현재 섹션용 Dot Indicator */}
             <div className="dot-indicator-container">
                 {questions.map((q, index) => (
                     <div

@@ -25,7 +25,7 @@ const SetupPage: React.FC = () => {
                 onBack={() => navigate('/test/risk-factor')}
             />
 
-            {/* Dot Indicator: Linked to Checked Items */}
+            {/* Dot Indicator: 체크 항목과 연동됨 */}
             <div className="dot-indicator-container">
                 {checkedItems.map((isChecked, index) => (
                     <div
@@ -39,7 +39,7 @@ const SetupPage: React.FC = () => {
                 <h1 className="page-title">검사 준비 가이드</h1>
                 <p className="page-subtitle">정확한 검사를 위해 아래 3단계를 준비해주세요.</p>
 
-                {/* Step 1: Preparation Items */}
+                {/* 1단계: 준비물 및 환경 */}
                 <section className="guide-section">
                     <div className="section-header-row">
                         <span className="step-badge">STEP 1</span>
@@ -56,7 +56,7 @@ const SetupPage: React.FC = () => {
                     </div>
                 </section>
 
-                {/* Step 2: Environment Setup */}
+                {/* 2단계: 환경 설정 방법 */}
                 <section className="guide-section">
                     <div className="section-header-row">
                         <span className="step-badge">STEP 2</span>
@@ -78,7 +78,7 @@ const SetupPage: React.FC = () => {
                     </div>
                 </section>
 
-                {/* Step 3: Camera Position */}
+                {/* 3단계: 휴대폰 위치 */}
                 <section className="guide-section">
                     <div className="section-header-row">
                         <span className="step-badge">STEP 3</span>
@@ -99,7 +99,7 @@ const SetupPage: React.FC = () => {
                     </div>
                 </section>
 
-                {/* Confirmation Checklist */}
+                {/* 확인 체크리스트 */}
                 <section className="confirmation-section">
                     <h3>준비가 완료되셨나요?</h3>
                     <div className="check-group">

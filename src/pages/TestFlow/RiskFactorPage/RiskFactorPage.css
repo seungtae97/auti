@@ -8,7 +8,7 @@
 .risk-content {
     flex: 1;
     padding: 24px 20px 40px;
-    /* Bottom padding for scroll */
+    /* 스크롤을 위한 하단 패딩 */
     overflow-y: auto;
     word-break: keep-all;
 }
@@ -46,7 +46,7 @@
     color: var(--text-main);
 }
 
-/* Card Styles */
+/* 카드 스타일 */
 .risk-card {
     padding: 24px 20px;
     border: 2px solid transparent;
@@ -57,7 +57,7 @@
 .risk-card.completed {
     border-color: var(--primary);
     background-color: #F0FDFA;
-    /* Very light teal */
+    /* 매우 연한 청록색 */
 }
 
 .q-header {
@@ -93,7 +93,7 @@
     padding-top: 2px;
 }
 
-/* Options */
+/* 선택지 */
 .options-row {
     display: flex;
     gap: 12px;
@@ -105,7 +105,7 @@
     gap: 10px;
 }
 
-/* RiskFooter with shadow for depth */
+/* 깊이감을 위한 그림자가 있는 RiskFooter */
 .risk-footer {
     padding: 20px 24px calc(20px + env(safe-area-inset-bottom));
     background-color: white;
@@ -113,7 +113,7 @@
     box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.05);
 }
 
-/* Option Buttons (Pill Style Refinement) */
+/* 옵션 버튼 (알약 스타일 개선) */
 .option-btn {
     flex: 1;
     padding: 16px;
@@ -145,7 +145,7 @@
 }
 
 
-/* Unified Header */
+/* 통합 헤더 */
 .wizard-header-unified {
     padding-bottom: 0;
     background-color: white;
@@ -158,7 +158,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 12px 16px 0 16px;
-    margin-bottom: -16px;
+
     /* Pull progress bar closer if needed */
 }
 
@@ -168,13 +168,12 @@
     color: var(--text-main);
 }
 
-/* Weeks Grid */
 .weeks-grid-container {
     margin-top: 10px;
-    /* Limit height for scrolling */
+    /* 스크롤을 위한 높이 제한 */
     overflow-y: auto;
     padding-right: 4px;
-    /* Space for scrollbar */
+    /* 스크롤바 공간 */
     padding-bottom: 20px;
 }
 
@@ -207,7 +206,7 @@
     transform: scale(0.95);
 }
 
-/* Number Control Refinement */
+/* 숫자 컨트롤 개선 */
 .number-control {
     display: flex;
     align-items: center;

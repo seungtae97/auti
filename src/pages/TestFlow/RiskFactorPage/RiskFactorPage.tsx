@@ -7,7 +7,7 @@ import './RiskFactorPage.css';
 
 interface RiskAnswers {
     q6?: 'yes' | 'no';
-    q7?: number; // Weeks
+    q7?: number; // 주수 (Weeks)
     q8?: 'under_34' | 'over_35';
     q9?: 'under_39' | 'over_40';
     q10?: 'yes' | 'no';
@@ -21,7 +21,7 @@ const RiskFactorPage: React.FC = () => {
     const [answers, setAnswers] = useState<RiskAnswers>({});
     const [currentStepIndex, setCurrentStepIndex] = useState(0);
 
-    // Define all steps in an array
+    // 모든 단계 배열 정의
     const steps = [
         { id: 'q6', type: 'yesno', question: "임신 중 자가면역질환(당뇨, 고혈압 등)이 있었나요?", stepTitle: "임신 및 출산 정보" },
         { id: 'q7', type: 'counter', question: "출산 시 임신 주수는?", stepTitle: "임신 및 출산 정보", min: 20, max: 50, unit: "주" },
@@ -60,7 +60,7 @@ const RiskFactorPage: React.FC = () => {
     const handleAnswer = (key: keyof RiskAnswers, value: any) => {
         setAnswers(prev => ({ ...prev, [key]: value }));
 
-        // Auto-advance logic for yes/no and choice
+        // 예/아니오 및 선택형 문항 자동 진행 로직
         if (currentStep.type === 'yesno' || currentStep.type === 'choice') {
             setTimeout(() => {
                 handleNextStep();
@@ -68,15 +68,15 @@ const RiskFactorPage: React.FC = () => {
         }
     };
 
-    // Helper for number increment/decrement - REMOVED (Replaced by Grid)
+    // 숫자 증감 헬퍼 - 제거됨 (그리드로 대체)
     // const adjustNumber = (key: 'q7', delta: number, min: number, max: number) => { ... }
 
-    // For counter, manual next
+    // 카운터형 문항 수동 다음 단계 이동
     const handleNextStep = () => {
         if (currentStepIndex < steps.length - 1) {
             setCurrentStepIndex(prev => prev + 1);
         } else {
-            // Finish
+            // 완료
             finishRiskAssessment();
         }
     };
@@ -111,13 +111,13 @@ const RiskFactorPage: React.FC = () => {
 
     const handleWeekSelect = (week: number) => {
         handleAnswer('q7', week);
-        // Auto-advance for week selection
+        // 주수 선택 시 자동 진행
         setTimeout(() => {
             handleNextStep();
         }, 300);
     };
 
-    // Render Step Content
+    // 단계별 콘텐츠 렌더링
     const renderStepContent = () => {
         switch (currentStep.type) {
             case 'yesno':
@@ -149,7 +149,7 @@ const RiskFactorPage: React.FC = () => {
                     </div>
                 );
             case 'counter':
-                // Changed to Button Grid as requested
+                // 요청에 따라 버튼 그리드로 변경됨
                 const min = (currentStep as any).min;
                 const max = (currentStep as any).max;
                 const weeks = Array.from({ length: max - min + 1 }, (_, i) => min + i);
@@ -174,19 +174,19 @@ const RiskFactorPage: React.FC = () => {
         }
     };
 
-    // Calculate progress for ProgressBar component
-    // currentStepIndex is 0-based, totalSteps is length.
-    // We want to show 1 to N.
+    // ProgressBar 컴포넌트용 진행률 계산
+    // currentStepIndex는 0부터 시작, totalSteps는 길이.
+    // 1부터 N까지 표시.
 
     return (
         <div className="risk-container">
-            {/* Top Navigation */}
+            {/* 상단 네비게이션 */}
             <WizardHeader
                 title="상세 설문"
                 currentStage={1}
                 onBack={handleBack}
             />
-            {/* Dot Indicator for current section */}
+            {/* 현재 섹션용 Dot Indicator */}
             <div className="dot-indicator-container">
                 {steps.map((_, index) => (
                     <div

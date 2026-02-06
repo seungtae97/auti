@@ -22,7 +22,7 @@
 
 .step-fraction {
     font-family: 'Roboto', sans-serif;
-    /* Monospaced digits preferred */
+    /* 고정폭 숫자 선호 */
 }
 
 .step-fraction .current {
@@ -37,7 +37,7 @@
     color: #94A3B8;
 }
 
-/* Segmented Track */
+/* 분할된 트랙 */
 .segmented-track {
     display: flex;
     gap: 6px;
@@ -63,7 +63,7 @@
     overflow: hidden;
 }
 
-/* Shimmer effect for current step */
+/* 현재 단계에 대한 쉬머(Shimmer) 효과 */
 .segment.current::after {
     content: '';
     position: absolute;

@@ -7,7 +7,7 @@ interface ProgressBarProps {
 }
 
 export const ProgressBar: React.FC<ProgressBarProps> = ({ currentStep, totalSteps }) => {
-    // Percentage for accessibility or advanced fluid animation if needed
+    // 접근성이나 고급 유동 애니메이션을 위한 퍼센트 계산 (필요 시 사용)
     // const percentage = Math.min((currentStep / totalSteps) * 100, 100);
 
     return (
