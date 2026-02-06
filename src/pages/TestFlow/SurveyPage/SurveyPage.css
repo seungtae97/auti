@@ -53,6 +53,7 @@
 .wizard-question-container {
     margin-top: 24px;
     margin-bottom: 40px;
+    text-align: center;
 }
 
 .q-badge {
@@ -72,6 +73,7 @@
     line-height: 1.4;
     color: var(--text-main);
     word-break: keep-all;
+    white-space: pre-line;
 }
 
 .wizard-options {

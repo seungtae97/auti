@@ -23,12 +23,15 @@ const RiskFactorPage: React.FC = () => {
 
     // 모든 단계 배열 정의
     const steps = [
-        { id: 'q6', type: 'yesno', question: "임신 중 자가면역질환(당뇨, 고혈압 등)이 있었나요?", stepTitle: "임신 및 출산 정보" },
+        {
+            id: 'q6', type: 'yesno', question: `임신 중 자가면역질환
+            (당뇨, 고혈압 등)이 있었나요?`, stepTitle: "임신 및 출산 정보"
+        },
         { id: 'q7', type: 'counter', question: "출산 시 임신 주수는?", stepTitle: "임신 및 출산 정보", min: 20, max: 50, unit: "주" },
         {
             id: 'q8', type: 'choice', question: "출산 시 엄마의 나이", stepTitle: "부모님 연령", options: [
-                { value: 'under_34', label: "만 34세 이하 (권장 시기)" },
-                { value: 'over_35', label: "만 35세 이상 (고령 산모)" }
+                { value: 'under_34', label: "만 34세 이하" },
+                { value: 'over_35', label: "만 35세 이상" }
             ]
         },
         {
@@ -46,13 +49,17 @@ const RiskFactorPage: React.FC = () => {
             ]
         },
         {
-            id: 'q12', type: 'choice', question: "첫 말문 트인 시기 (\"엄마\" 등 의미있는 단어)", stepTitle: "발달 및 가족력", options: [
+            id: 'q12', type: 'choice', question: `첫 말문 트인 시기
+             (\"엄마\" 등 의미있는 단어)`, stepTitle: "발달 및 가족력", options: [
                 { value: 'under_12', label: "돌 이전 (12개월 미만/전후)" },
                 { value: 'over_13', label: "13개월 이후" },
                 { value: 'na', label: "아직 못함" }
             ]
         },
-        { id: 'q13', type: 'yesno', question: "형제/자매 중 자폐 스펙트럼이 있나요?", stepTitle: "발달 및 가족력" }
+        {
+            id: 'q13', type: 'yesno', question: `형제/자매 중
+            자폐 스펙트럼이 있나요?`, stepTitle: "발달 및 가족력"
+        }
     ];
 
     const currentStep = steps[currentStepIndex];

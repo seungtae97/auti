@@ -11,12 +11,30 @@
     /* 스크롤을 위한 하단 패딩 */
     overflow-y: auto;
     word-break: keep-all;
+    /* SurveyPage와 동일한 중앙 정렬 및 줄바꿈 */
+    text-align: center;
 }
 
 .questions-group {
     display: flex;
     flex-direction: column;
     gap: 20px;
+}
+
+/* 질문 텍스트 스타일 (SurveyPage와 통일) */
+.wizard-question-container {
+    margin-top: 24px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.wizard-question-text {
+    font-size: 1.5rem;
+    font-weight: 800;
+    line-height: 1.4;
+    color: var(--text-main);
+    word-break: keep-all;
+    white-space: pre-line;
 }
 
 .section-title-row {
