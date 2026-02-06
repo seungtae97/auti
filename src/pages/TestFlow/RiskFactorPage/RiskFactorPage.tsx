@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 // import { Button } from '../../../components/Button/Button'; // Unused
 import { WizardHeader } from '../../../components/WizardHeader/WizardHeader';
-import { ProgressBar } from '../../../components/ProgressBar/ProgressBar';
 // import { Card } from '../../../components/Card/Card';
 import './RiskFactorPage.css';
 
@@ -187,9 +186,14 @@ const RiskFactorPage: React.FC = () => {
                 currentStage={1}
                 onBack={handleBack}
             />
-            {/* Sub-progress for current section */}
-            <div className="sub-progress-bar-container" style={{ padding: '0 16px 16px 16px', background: 'white' }}>
-                <ProgressBar currentStep={currentStepIndex + 1} totalSteps={steps.length} />
+            {/* Dot Indicator for current section */}
+            <div className="dot-indicator-container">
+                {steps.map((_, index) => (
+                    <div
+                        key={index}
+                        className={`dot-indicator ${index <= currentStepIndex ? 'filled' : ''}`}
+                    />
+                ))}
             </div>
 
             <div className="risk-content wizard-layout">

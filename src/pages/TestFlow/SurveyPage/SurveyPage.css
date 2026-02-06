@@ -19,31 +19,6 @@
     z-index: 10;
 }
 
-/* Dot Indicator */
-.dot-indicator-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 8px;
-    padding: 0 16px 16px 16px;
-    background-color: white;
-}
-
-.dot-indicator {
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    background-color: #E2E8F0;
-    /* Grey 200/300 */
-    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-}
-
-.dot-indicator.active {
-    background-color: #3B82F6;
-    /* Primary Blue (Tailwind Blue 500 equivalent) */
-    transform: scale(1.2);
-}
-
 .header-top-row {
     display: flex;
     justify-content: space-between;

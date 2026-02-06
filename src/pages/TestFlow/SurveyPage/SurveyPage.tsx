@@ -58,7 +58,7 @@ const SurveyPage: React.FC = () => {
                 {questions.map((q, index) => (
                     <div
                         key={q.id}
-                        className={`dot-indicator ${index === currentStep ? 'active' : ''}`}
+                        className={`dot-indicator ${index <= currentStep ? 'filled' : ''}`}
                     />
                 ))}
             </div>

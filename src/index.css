@@ -223,3 +223,37 @@ textarea {
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
+/* Global Dot Indicator Styles */
+.dot-indicator-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  padding: 0 16px 16px 16px;
+  background-color: white;
+}
+
+.dot-indicator {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #E2E8F0;
+  /* Default inactive color */
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.dot-indicator.filled {
+  background-color: var(--primary);
+  /* Stacked/Filled color */
+  transform: scale(1.1);
+  /* Slight emphasis for filled dots */
+}
+
+.dot-indicator.active {
+  /* Optional: Special style for ONLY the current step if needed, 
+       but for stacked UI, 'filled' covers it. 
+       We can add a subtle ring or darker shade for the *current* exact step if desired.
+    */
+  background-color: var(--primary-dark);
+}

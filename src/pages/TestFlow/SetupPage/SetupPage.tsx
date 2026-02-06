@@ -25,6 +25,16 @@ const SetupPage: React.FC = () => {
                 onBack={() => navigate('/test/risk-factor')}
             />
 
+            {/* Dot Indicator: Linked to Checked Items */}
+            <div className="dot-indicator-container">
+                {checkedItems.map((isChecked, index) => (
+                    <div
+                        key={index}
+                        className={`dot-indicator ${isChecked ? 'filled' : ''}`}
+                    />
+                ))}
+            </div>
+
             <div className="setup-content">
                 <h1 className="page-title">검사 준비 가이드</h1>
                 <p className="page-subtitle">정확한 검사를 위해 아래 3단계를 준비해주세요.</p>
