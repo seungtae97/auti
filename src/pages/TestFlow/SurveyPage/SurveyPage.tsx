@@ -3,7 +3,6 @@ import { useNavigate } from 'react-router-dom';
 import { Button } from '../../../components/Button/Button';
 // import { Card } from '../../../components/Card/Card'; // Not used in wizard mode
 import { WizardHeader } from '../../../components/WizardHeader/WizardHeader';
-import { ProgressBar } from '../../../components/ProgressBar/ProgressBar';
 import './SurveyPage.css';
 
 const SurveyPage: React.FC = () => {
@@ -54,9 +53,14 @@ const SurveyPage: React.FC = () => {
                 currentStage={1}
                 onBack={handleBack}
             />
-            {/* Sub-progress for current section */}
-            <div className="sub-progress-bar-container" style={{ padding: '0 16px 16px 16px', background: 'white' }}>
-                <ProgressBar currentStep={currentStep + 1} totalSteps={questions.length} />
+            {/* Dot Indicator for current section */}
+            <div className="dot-indicator-container">
+                {questions.map((q, index) => (
+                    <div
+                        key={q.id}
+                        className={`dot-indicator ${index === currentStep ? 'active' : ''}`}
+                    />
+                ))}
             </div>
 
             <div className="survey-content wizard-layout">
