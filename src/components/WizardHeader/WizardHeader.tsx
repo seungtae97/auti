@@ -1,11 +1,11 @@
 import React from 'react';
 import { ChevronLeft } from 'lucide-react';
+import { TestStageIndicator } from '../TestStageIndicator/TestStageIndicator';
 import './WizardHeader.css';
 
 interface WizardHeaderProps {
     title: string;
     currentStage: 1 | 2 | 3;
-    totalStages?: number;
     onBack?: () => void;
     showBackBtn?: boolean;
 }
@@ -13,7 +13,6 @@ interface WizardHeaderProps {
 export const WizardHeader: React.FC<WizardHeaderProps> = ({
     title,
     currentStage,
-    totalStages = 3,
     onBack,
     showBackBtn = true
 }) => {
@@ -32,14 +31,9 @@ export const WizardHeader: React.FC<WizardHeaderProps> = ({
                     <h1 className="header-title">{title}</h1>
                 </div>
 
-                <div className="header-right-area">
-                    <span className="step-indicator">
-                        <span className="step-current">{currentStage}</span>
-                        <span className="step-divider">/</span>
-                        <span className="step-total">{totalStages}</span>
-                    </span>
-                </div>
+                <div className="header-right-area"></div> {/* Spacer for center alignment */}
             </div>
+            <TestStageIndicator currentStage={currentStage} />
         </div>
     );
 };
