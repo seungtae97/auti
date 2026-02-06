@@ -1,0 +1,89 @@
+.stage-indicator-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 24px 24px 16px 24px;
+    background-color: white;
+    width: 100%;
+}
+
+.stage-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    position: relative;
+    z-index: 2;
+    flex: 1;
+}
+
+/* Last item shouldn't grow to fill space beyond itself, but we need spacing */
+.stage-item:last-child {
+    flex: 0;
+}
+
+.stage-circle {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: #E2E8F0;
+    color: #94A3B8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.75rem;
+    font-weight: 700;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.stage-label {
+    font-size: 0.85rem;
+    color: #94A3B8;
+    font-weight: 500;
+    white-space: nowrap;
+    transition: color 0.3s ease;
+}
+
+/* Active State */
+.stage-item.active .stage-circle {
+    background-color: var(--primary);
+    color: white;
+    box-shadow: 0 0 0 4px var(--primary-light);
+}
+
+.stage-item.active .stage-label {
+    color: var(--primary);
+    font-weight: 700;
+}
+
+/* Completed State */
+.stage-item.completed .stage-circle {
+    background-color: var(--part-success, #38C976);
+    /* Fallback or variable */
+    color: white;
+}
+
+.stage-item.completed .stage-label {
+    color: var(--text-main);
+}
+
+/* Connector Line */
+.stage-connector-wrapper {
+    flex: 1;
+    height: 2px;
+    background-color: #E2E8F0;
+    margin: 0 8px;
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+.stage-connector {
+    height: 100%;
+    width: 0%;
+    background-color: var(--part-success, #38C976);
+    transition: width 0.3s ease;
+}
+
+.stage-connector.filled {
+    width: 100%;
+}

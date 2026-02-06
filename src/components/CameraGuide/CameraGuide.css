@@ -1,0 +1,76 @@
+.camera-guide-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    /* Allow clicks to pass through to camera controls */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+}
+
+.guide-shape {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.guide-box {
+    border: 2px dashed rgba(255, 255, 255, 0.8);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 0 9999px rgba(0, 0, 0, 0.3);
+    /* Darken outside */
+}
+
+.guide-box.dashed-border {
+    width: 200px;
+    height: 200px;
+}
+
+.guide-box.wide {
+    width: 280px;
+    height: 180px;
+}
+
+.guide-label {
+    margin-top: 16px;
+    color: white;
+    font-weight: 600;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 4px 12px;
+    border-radius: 20px;
+    text-align: center;
+}
+
+/* Silhouettes (Simplified with CSS shapes/borders for now) */
+.guide-silhouette {
+    border: 2px solid rgba(255, 255, 255, 0.6);
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.face-silhouette {
+    position: absolute;
+    width: 140px;
+    height: 180px;
+    border-radius: 50% 50% 60% 60%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.full-body-silhouette {
+    width: 150px;
+    height: 300px;
+    border-radius: 40px;
+    margin-bottom: 20px;
+}

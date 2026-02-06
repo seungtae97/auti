@@ -1,0 +1,212 @@
+.precautions-container {
+    display: flex;
+    flex-direction: column;
+    height: 100dvh;
+    background-color: var(--bg-main);
+}
+
+.precautions-content {
+    flex: 1;
+    padding: 24px;
+    overflow-y: auto;
+    display: flex;
+    word-break: keep-all;
+    flex-direction: column;
+}
+
+.header-icon-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 16px;
+}
+
+.header-icon {
+    color: #F59E0B;
+    /* Amber 500 */
+}
+
+.page-title.text-center {
+    text-align: center;
+}
+
+.page-subtitle.text-center {
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+/* Sections */
+.precaution-section {
+    margin-bottom: 28px;
+}
+
+.section-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--text-main);
+    margin-bottom: 12px;
+}
+
+.section-header.error-text {
+    color: #EF4444;
+    /* Red 500 */
+}
+
+.section-icon {
+    margin-top: 2px;
+}
+
+.card-box {
+    border-radius: 16px;
+    padding: 20px;
+    box-shadow: var(--shadow-sm);
+}
+
+.card-box.warning-bg {
+    background-color: #FFFBEB;
+    /* Amber 50 */
+    border: 1px solid #FDE68A;
+}
+
+.card-box.error-bg {
+    background-color: #FEF2F2;
+    /* Red 50 */
+    border: 1px solid #FECACA;
+}
+
+/* Rule Items */
+.rule-item {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.rule-item:last-child {
+    margin-bottom: 0;
+}
+
+.bullet {
+    background-color: #F59E0B;
+    color: white;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.75rem;
+    font-weight: 700;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.rule-item p {
+    font-size: 0.95rem;
+    color: var(--text-main);
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* Banned List */
+.dont-desc {
+    font-size: 0.9rem;
+    color: #B91C1C;
+    /* Red 700 */
+    margin-bottom: 12px;
+    font-weight: 600;
+}
+
+.banned-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.banned-list li {
+    background-color: white;
+    color: #EF4444;
+    font-weight: 700;
+    padding: 10px 14px;
+    border-radius: 10px;
+    font-size: 0.95rem;
+    text-align: center;
+    border: 1px solid #FCA5A5;
+}
+
+/* Confirmation */
+.confirmation-wrapper {
+    margin-top: auto;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px;
+    background-color: white;
+    border-radius: 16px;
+    cursor: pointer;
+    border: 1px solid #E2E8F0;
+    transition: all 0.2s;
+}
+
+.confirmation-wrapper:active {
+    background-color: #F8FAFC;
+    transform: scale(0.99);
+}
+
+.check-circle {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    border: 2px solid #CBD5E0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    flex-shrink: 0;
+    transition: all 0.2s;
+}
+
+.check-circle.active {
+    background-color: var(--primary);
+    border-color: var(--primary);
+}
+
+.confirmation-wrapper span {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--text-main);
+    line-height: 1.4;
+}
+
+.precautions-footer {
+    padding: 24px;
+    background-color: white;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.03);
+}
+
+/* Error Feedback */
+@keyframes shake {
+
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(-5px);
+    }
+
+    75% {
+        transform: translateX(5px);
+    }
+}
+
+.shake-animation {
+    animation: shake 0.3s ease-in-out;
+    border-color: #EF4444;
+    background-color: #FEF2F2;
+}

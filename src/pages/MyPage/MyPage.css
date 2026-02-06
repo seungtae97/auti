@@ -1,0 +1,99 @@
+.mypage-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100dvh;
+    background-color: var(--bg-main);
+    /* Cool Gray */
+    padding-bottom: calc(64px + env(safe-area-inset-bottom));
+}
+
+/* .mypage-header removed (using global Header) */
+
+.mypage-content {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+/* Profile Card */
+.profile-card {
+    background-color: white;
+    border-radius: 24px;
+    padding: 24px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    box-shadow: var(--shadow-sm);
+}
+
+.profile-avatar {
+    width: 64px;
+    height: 64px;
+    border-radius: 24px;
+    /* Squircle */
+    background: linear-gradient(135deg, var(--brand-gradient-start), var(--brand-gradient-end));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile-details {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.profile-name {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--text-main);
+}
+
+.profile-meta {
+    font-size: 0.95rem;
+    color: var(--text-sub);
+}
+
+/* Menu Groups */
+.menu-group {
+    background-color: white;
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+}
+
+.menu-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 24px;
+    width: 100%;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.menu-item:active {
+    background-color: #F9FAFB;
+}
+
+.menu-item-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.menu-icon {
+    color: var(--text-sub);
+}
+
+.menu-text {
+    font-size: 1.05rem;
+    font-weight: 500;
+    color: var(--text-main);
+}
+
+/* Logout specific */
+.logout-text {
+    color: var(--danger);
+}

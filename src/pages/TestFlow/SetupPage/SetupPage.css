@@ -1,0 +1,219 @@
+.setup-container {
+    display: flex;
+    flex-direction: column;
+    height: 100dvh;
+    background-color: var(--bg-main);
+}
+
+.setup-content {
+    flex: 1;
+    padding: 24px;
+    overflow-y: auto;
+    word-break: keep-all;
+}
+
+.page-title {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--text-main);
+    margin-bottom: 8px;
+}
+
+.page-subtitle {
+    font-size: 1rem;
+    color: var(--text-sub);
+    margin-bottom: 32px;
+}
+
+/* Guide Section */
+.guide-section {
+    margin-bottom: 32px;
+}
+
+.section-header-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 12px;
+}
+
+.step-badge {
+    background-color: var(--primary);
+    color: white;
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 2px 8px;
+    border-radius: 6px;
+}
+
+.section-title {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--text-main);
+}
+
+.guide-card {
+    background-color: white;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: var(--shadow-sm);
+}
+
+.guide-card.info-bg {
+    background-color: #F8FAFC;
+    border: 1px solid #E2E8F0;
+}
+
+.guide-card.camera-bg {
+    background-color: #F0FDF4;
+    /* Light Green Tint */
+    border: 1px solid #DCFCE7;
+}
+
+/* Lists and Steps */
+.guide-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0x;
+}
+
+.guide-list li {
+    display: flex;
+    align-items: center;
+    gap: 0px;
+    font-size: 0.95rem;
+    color: var(--text-main);
+    line-height: 1.4;
+}
+
+.guide-list li .icon {
+    color: var(--primary);
+    min-width: 20px;
+    margin-right: 10px;
+}
+
+.step-row {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.step-row:last-child {
+    margin-bottom: 0;
+}
+
+.step-row .num {
+    background-color: var(--text-main);
+    color: white;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.75rem;
+    font-weight: 700;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.step-row p {
+    font-size: 0.95rem;
+    color: var(--text-main);
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* Camera Guide */
+.cam-guide-row {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 16px;
+}
+
+.cam-icon {
+    color: var(--primary-dark);
+}
+
+.cam-text strong {
+    display: block;
+    font-size: 1rem;
+    color: var(--primary-dark);
+    margin-bottom: 2px;
+}
+
+.cam-text p {
+    font-size: 0.9rem;
+    color: var(--text-sub);
+    margin: 0;
+}
+
+.cam-check-list p {
+    font-size: 0.85rem;
+    color: var(--text-main);
+    margin: 4px 0;
+}
+
+/* Confirmation Check */
+.confirmation-section h3 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 16px;
+    text-align: center;
+}
+
+.check-group {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.check-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background-color: white;
+    padding: 16px;
+    border-radius: 16px;
+    border: 2px solid #E5E8EB;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.check-item.checked {
+    border-color: var(--primary);
+    background-color: var(--primary-light);
+}
+
+.check-box {
+    width: 24px;
+    height: 24px;
+    border-radius: 6px;
+    border: 2px solid #CBD5E0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    transition: all 0.2s;
+}
+
+.check-item.checked .check-box {
+    background-color: var(--primary);
+    border-color: var(--primary);
+}
+
+.check-item span {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--text-main);
+}
+
+.setup-footer {
+    padding: 24px;
+    background-color: white;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.03);
+}

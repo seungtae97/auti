@@ -1,0 +1,90 @@
+.splash-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100dvh;
+    background-color: white;
+    /* Clean White Background */
+    color: var(--brand-navy);
+    animation: fadeIn 0.5s ease-out;
+}
+
+.splash-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.logo-icon-wrapper {
+    margin-bottom: var(--spacing-md);
+    animation: float 3s ease-in-out infinite;
+}
+
+.brain-icon {
+    color: url(#brand-gradient);
+    /* Note: SVG gradients need defs, simple fallback below */
+    stroke: url(#gradient);
+    /* Using CSS gradient text clip for icon isn't direct for SVG stroke. 
+       We will use a simple color for now or mask. 
+       Let's stick to the Primary Teal for the icon stroke for simplicity 
+       OR use a specific class if Lucide supports it. 
+       Lucide icons take 'color' prop. We can't easily gradient stroke without SVG defs. 
+       Let's use the Primary Color which is Teal. */
+    color: var(--primary);
+    filter: drop-shadow(0 4px 6px rgba(42, 157, 143, 0.3));
+}
+
+.app-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: var(--spacing-xs);
+    color: var(--brand-navy);
+    letter-spacing: -0.5px;
+    animation: textSlideUp 0.8s ease-out;
+}
+
+.app-subtitle {
+    font-size: 1rem;
+    color: var(--secondary);
+    /* Green Accent */
+    font-weight: 500;
+    animation: textSlideUp 0.8s ease-out 0.2s backwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes textSlideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}

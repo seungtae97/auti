@@ -1,0 +1,96 @@
+.login-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100dvh;
+    padding: var(--spacing-lg);
+    padding-bottom: calc(var(--spacing-lg) + env(safe-area-inset-bottom));
+    background-color: var(--bg-main);
+}
+
+.login-header {
+    margin-top: 60px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.login-title {
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: var(--spacing-xs);
+    letter-spacing: -0.5px;
+}
+
+.login-subtitle {
+    color: var(--text-sub);
+    font-size: 1rem;
+}
+
+.login-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.login-card {
+    background-color: white !important;
+    padding: 40px 24px !important;
+    text-align: center;
+    border: none !important;
+    box-shadow: var(--shadow-md) !important;
+}
+
+/* Updated Brand Logo Area */
+.tomato-logo-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: var(--spacing-sm);
+    margin-bottom: var(--spacing-lg);
+    color: var(--brand-navy);
+    /* Changed from Red to Navy */
+}
+
+/* Remove old Tomato Icon specific style if any, using generic now */
+
+.login-desc {
+    color: var(--text-sub);
+    margin-bottom: var(--spacing-xl);
+    line-height: 1.6;
+}
+
+.tomato-login-btn {
+    background-color: var(--brand-navy) !important;
+    /* Login Button as Navy or Primary */
+    color: white !important;
+    font-weight: 700;
+    border-radius: var(--radius-md) !important;
+    height: 56px !important;
+}
+
+.tomato-login-btn:hover:not(:disabled) {
+    opacity: 0.9;
+    transform: translateY(-1px);
+}
+
+.login-help {
+    margin-top: var(--spacing-lg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: var(--spacing-md);
+    color: var(--text-caption);
+    font-size: 0.875rem;
+}
+
+.text-btn {
+    color: var(--text-sub);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.divider {
+    color: #E2E8F0;
+}

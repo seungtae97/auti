@@ -1,0 +1,68 @@
+.history-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100dvh;
+    background-color: var(--bg-main);
+    padding-bottom: calc(64px + env(safe-area-inset-bottom));
+}
+
+/* .history-header removed (using global Header) */
+
+.history-content {
+    padding: 24px;
+    flex: 1;
+}
+
+/* Reusing history item styles from global or copying here for isolation */
+.history-list-group {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.history-item {
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: var(--shadow-sm);
+    cursor: pointer;
+    transition: transform 0.1s;
+}
+
+.history-item:active {
+    transform: scale(0.98);
+}
+
+.history-info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.history-date {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--text-main);
+}
+
+.history-result {
+    font-size: 0.9rem;
+    color: var(--text-sub);
+}
+
+.status-badge {
+    background-color: var(--bg-main);
+    color: var(--text-sub);
+    font-size: 0.8rem;
+    padding: 6px 12px;
+    border-radius: 12px;
+    font-weight: 600;
+}
+
+.status-badge.complete {
+    background-color: var(--primary-light);
+    color: var(--primary-dark);
+}

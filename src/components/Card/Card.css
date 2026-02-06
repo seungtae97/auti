@@ -1,0 +1,28 @@
+.card {
+    background-color: var(--bg-white);
+    border-radius: var(--radius-md);
+    /* 20px */
+    padding: 24px;
+    box-shadow: var(--shadow-sm);
+    border: none;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    overflow: hidden;
+    /* Ensure content respects radius */
+}
+
+/* Clickable State - Mobile App Interaction Feel */
+.card-clickable {
+    cursor: pointer;
+}
+
+.card-clickable:active {
+    transform: scale(0.98);
+    background-color: #F9FAFB;
+}
+
+.card-title {
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: var(--text-main);
+    margin-bottom: var(--spacing-sm);
+}
